@@ -30,7 +30,7 @@ namespace ServiceDesk.Data.Migrations
             modelBuilder
                 .HasAnnotation("ProductVersion", "2.0.2-rtm-10011");
 
-            modelBuilder.Entity("ServiceDesk.Models.Client", b =>
+            modelBuilder.Entity("ServiceDesk.Models.Employee", b =>
             {
                 b.Property<Guid>("Id")
                     .ValueGeneratedOnAdd();

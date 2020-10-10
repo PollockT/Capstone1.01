@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore.Migrations;
+using Microsoft.EntityFrameworkCore;
 
 namespace ServiceDesk.Data.Migrations
 {
@@ -66,7 +67,7 @@ namespace ServiceDesk.Data.Migrations
                 {
                     Id = table.Column<Guid>(nullable: false),
                     Address = table.Column<string>(nullable: true),
-                    Company = table.Column<string>(nullable: true),
+                    Department = table.Column<string>(nullable: true),
                     DateAdded = table.Column<DateTime>(nullable: false),
                     EmailAddress = table.Column<string>(nullable: true),
                     FirstName = table.Column<string>(nullable: true),
@@ -75,7 +76,7 @@ namespace ServiceDesk.Data.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Clients", x => x.Id);
+                    table.PrimaryKey("PK_Employee", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -98,7 +99,7 @@ namespace ServiceDesk.Data.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(nullable: false),
-                    ClientId = table.Column<Guid>(nullable: false),
+                    EmployeeId = table.Column<Guid>(nullable: false),
                     Complexity = table.Column<int>(nullable: false),
                     DateAdded = table.Column<DateTime>(nullable: false),
                     Description = table.Column<string>(nullable: true),

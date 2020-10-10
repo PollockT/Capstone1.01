@@ -1,5 +1,6 @@
 ﻿using ServiceDesk.Data;
 using ServiceDesk.Models;
+using ServiceDesk.Controllers;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpOverrides;
@@ -11,6 +12,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.EntityFrameworkCore;
+using System.Linq;
 
 namespace ServiceDesk
 {
@@ -87,7 +89,7 @@ namespace ServiceDesk
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Tickets}/{action=All}/{id?}");
+                    template: "{controller=Ticket}/{action=All}/{id?}");
             });
         }
     }

@@ -31,7 +31,7 @@ namespace ServiceDesk.Controllers
         }
 
         /// <summary>
-        /// Shows all clients
+        /// Shows all employees
         /// </summary>
         /// <returns>clients page</returns>
         [HttpGet]

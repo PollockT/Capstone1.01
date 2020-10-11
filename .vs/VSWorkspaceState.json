@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
+    "\\Documentation",
     "\\HelpDesk"
   ],
-  "SelectedNode": "\\src\\ServiceDesk.csproj",
+  "SelectedNode": "\\HelpDesk\\Data",
   "PreviewInSolutionExplorer": false
 }

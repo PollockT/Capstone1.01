@@ -16,7 +16,7 @@
       }
      
     },
-    "GoldenTicket": {
+    "ServiceDesk": {
       "commandName": "Project",
       "launchBrowser": true,
       "environmentVariables": {

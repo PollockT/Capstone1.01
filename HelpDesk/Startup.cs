@@ -89,7 +89,7 @@ namespace ServiceDesk
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Ticket}/{action=All}/{id?}");
+                    template: "{controller=Tickets}/{action=All}/{id?}");
             });
         }
     }

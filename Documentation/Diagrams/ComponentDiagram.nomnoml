@@ -1,0 +1,100 @@
+[<frame> Component Diagram |
+    [<package> Website |
+        [Html] --> [Css]
+        [Html] --> [Javascript]
+
+        [<frame> Html |
+            Ticket Dashboard
+            Ticket Editor
+            Ticket Viewer |
+            Customer Dashboard
+            Customer Editor
+            Customer Viewer |
+            Technician Dashboard
+            Technician Editor
+            Technician Viewer
+        ]
+
+        [<frame> Javascript |
+            TicketManager
+            CustomerManager
+            TechnicianManager |
+            DashboardController
+        ]   
+    ] --> [Web Api]
+
+    [<package> Web Api |
+        [<frame> Models|
+            [Client |
+                Guid Id
+                string FirstName
+                string LastName
+                string PhoneNumber
+                string EmailAddress
+                string Company
+                string Address
+                DateTime DateAdded
+            ] +- [Ticket]
+            
+            [Ticket |
+                Guid Id
+                Guid ClientId
+                string Title
+                string Description
+                int Complexity
+                bool IsUrgent
+            ] +- [TechnicianTicketTime]
+
+            [TechnicianTicketTime |
+                Guid TechnicianId
+                Guid TicketId
+                Datetime Start
+                Datetime End
+            ]
+
+            [Technician |
+                Guid Id
+                bool IsAdmin
+                string Name
+                DateTime DateAdded
+            ] +- [TechnicianTicketTime]
+        ]
+
+        [<frame> Controllers|
+            [TicketController |
+                Ticket Get(Guid id): Gets a ticket by id
+                Ticket\[\] Get(int index, int count): Gets a range of tickets in order
+                Ticket Add(Ticket ticket): Adds a ticket
+                void Delete(Guid id): Removes a ticket
+                Ticket Update(Guid id, Ticket ticket): Updates a ticket
+                Technician\[\] GetTechnicians(Guid id): Get technicians working on a ticket based on its id
+                
+            ]
+            [ClientController |
+                Client Get(Guid id)
+                Client\[\] Get(int index, int count)
+                void Add(Client client)
+                void Delete(Guid id)
+                void Update(Guid id, Client client)
+            ]
+            [TechnicianController |
+                Technician Get(Guid id)
+                Technician\[\] Get(int index, int count)
+                void Add(Technician technician)
+                void Delete(Guid id)
+                void Update(Guid id, Technician technician)
+            ]
+        ] --> [Models]
+    ]
+
+    [<package> Identity Server 4 |
+        [User |
+            Guid Id
+            string Username
+            string PasswordHash
+            string Salt
+        ]
+    ]
+
+    [Web Api] --> [Identity Server 4]
+]

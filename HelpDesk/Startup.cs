@@ -57,6 +57,7 @@ namespace ServiceDesk
                 options.Password.RequireLowercase = false;
                 options.Password.RequiredUniqueChars = 1;
             });
+            services.AddApplicationInsightsTelemetry();
         }
 
         /// <summary>

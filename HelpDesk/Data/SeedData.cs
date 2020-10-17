@@ -12,23 +12,23 @@ namespace ServiceDesk.Data
     {
         private static Technician[] _technicians = {
             new Technician {
-                FirstName = "Madeline",
-                LastName = "Booth",
+                FirstName = "Theodore",
+                LastName = "Pollock",
                 IsAdmin = true
             },
             new Technician {
-                FirstName = "Charles",
-                LastName = "Woods",
+                FirstName = "Jason",
+                LastName = "Fisher",
                 IsAdmin = true
             },
             new Technician {
-                FirstName = "Nico",
-                LastName = "Perkins",
+                FirstName = "Micheal",
+                LastName = "McClain",
                 IsAdmin = true
             },
             new Technician {
-                FirstName = "Marie",
-                LastName = "Wilson",
+                FirstName = "Rosa",
+                LastName = "Lopez",
                 IsAdmin = false
             },
             new Technician {
@@ -37,53 +37,53 @@ namespace ServiceDesk.Data
                 IsAdmin = false
             },
             new Technician {
-                FirstName = "Taryn",
-                LastName = "Norman",
+                FirstName = "Ashely",
+                LastName = "McCormik",
                 IsAdmin = false
             },
             new Technician {
-                FirstName = "Kieran",
-                LastName = "Lam",
+                FirstName = "Kiero",
+                LastName = "Ashuno",
                 IsAdmin = false
             },
             new Technician {
-                FirstName = "Natalya",
-                LastName = "Lynch",
+                FirstName = "Joe",
+                LastName = "Yaller",
                 IsAdmin = false
             },
             new Technician {
-                FirstName = "Gavin",
-                LastName = "Preston",
+                FirstName = "Preston",
+                LastName = "Gaul",
                 IsAdmin = false
             },
             new Technician {
                 FirstName = "Kira",
-                LastName = "Paul",
+                LastName = "Yagashi",
                 IsAdmin = false
             },
             new Technician {
-                FirstName = "Shyla",
-                LastName = "Turner",
+                FirstName = "Joesph",
+                LastName = "Brown",
                 IsAdmin = false
             },
             new Technician {
-                FirstName = "Ana",
-                LastName = "Wise",
+                FirstName = "Ryan",
+                LastName = "Wheeland",
                 IsAdmin = false
             },
             new Technician {
-                FirstName = "Rylan",
-                LastName = "Bryan",
+                FirstName = "Lindsey",
+                LastName = "Fencil",
                 IsAdmin = false
             },
             new Technician {
-                FirstName = "Cailyn",
-                LastName = "Melton",
+                FirstName = "Mark",
+                LastName = "Fencil",
                 IsAdmin = false
             },
             new Technician {
-                FirstName = "Rory",
-                LastName = "Clark",
+                FirstName = "Rori",
+                LastName = "Flari",
                 IsAdmin = false
             }
         };
